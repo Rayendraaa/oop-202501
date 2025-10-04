@@ -1,44 +1,90 @@
-# Laporan Praktikum Minggu 1 (sesuaikan minggu ke berapa?)
-Topik: [Tuliskan judul topik, misalnya "Class dan Object"]
+# Laporan Praktikum Minggu 1
+Topik: Implementasi 3 Paradigma Pemrograman: Procedural, OOP, dan Functional
 
 ## Identitas
-- Nama  : [Nama Mahasiswa]
-- NIM   : [NIM Mahasiswa]
-- Kelas : [Kelas]
+- Nama: Ray
+- NIM: 240202880
+- Kelas: 3IKRA
 
 ---
 
 ## Tujuan
-(Tuliskan tujuan praktikum minggu ini.  
-Contoh: *Mahasiswa memahami konsep class dan object serta dapat membuat class Produk dengan enkapsulasi.*)
-
+Mahasiswa memahami perbedaan konsep dan implementasi antara tiga paradigma pemrograman yaitu procedural, object-oriented (OOP), dan functional, serta mampu mengaplikasikan ketiganya dalam pemrograman Java untuk kasus sederhana seperti pengolahan data produk.
 ---
 
 ## Dasar Teori
-(Tuliskan ringkasan teori singkat (3–5 poin) yang mendasari praktikum.  
-Contoh:  
-1. Class adalah blueprint dari objek.  
-2. Object adalah instansiasi dari class.  
-3. Enkapsulasi digunakan untuk menyembunyikan data.)
-
+1. Pemrograman Prosedural adalah paradigma pemrograman yang berfokus pada urutan instruksi atau langkah-langkah prosedural yang dijalankan dari atas ke bawah.
+2. Pemrograman Berorientasi Objek (OOP) menekankan konsep class dan object untuk mengelompokkan data serta perilaku ke dalam satu kesatuan.
+3. Class merupakan cetak biru (blueprint) dari objek yang berisi atribut dan metode.
+4. Functional Programming memanfaatkan fungsi murni dan operasi berbasis stream untuk mengolah data tanpa perubahan status (immutable).
+5. Java mendukung ketiga paradigma tersebut sehingga fleksibel dalam berbagai gaya pemrograman.
 ---
 
 ## Langkah Praktikum
 (Tuliskan Langkah-langkah dalam prakrikum, contoh:
-1. Langkah-langkah yang dilakukan (setup, coding, run).  
-2. File/kode yang dibuat.  
-3. Commit message yang digunakan.)
-
+1. Membuat tiga file Java:
+   - HelloProcedural.java
+   - HelloOOP.java
+   - HelloFunctional.java
+2. Menulis kode untuk menampilkan daftar produk beserta harga dan menghitung total harga.
+3. Melakukan compile dan run masing-masing file.
+   
 ---
 
-## Kode Program
-(Tuliskan kode utama yang dibuat, contoh:  
+## Kode Program  
 
-```java
-// Contoh
-Produk p1 = new Produk("BNH-001", "Benih Padi", 25000, 100);
-System.out.println(p1.getNama());
-```
+```HelloProsedural.java
+public class HelloProcedural {
+   public static void main(String[] args) {
+      String nim = "240202880";
+      String nama = "Ray";
+      String[] produk = {"Beras", "Pupuk", "Benih"};
+      int[] harga = {10000, 15000, 12000};
+      int total = 0;
+
+      System.out.println("Nama: " + nama + ", NIM: " + nim);
+      System.out.println("Daftar Produk:");
+      for (int i = 0; i < produk.length; i++) {
+         System.out.println("- " + produk[i] + ": " + harga[i]);
+         total += harga[i];
+      }
+      System.out.println("Total harga semua produk: " + total);
+   }
+}
+
+```HelloOOP.java
+class Produk {
+   String nama;
+   int harga;
+   Produk(String nama, int harga) {
+      this.nama = nama;
+      this.harga = harga;
+   }
+}
+
+public class HelloOOP { 
+   public static void main(String[] args) {
+      String nim = "240202880";
+      String namaMhs = "Ray";
+      Produk[] daftar = {
+         new Produk("Beras", 10000),
+         new Produk("Pupuk", 15000),
+         new Produk("Benih", 12000)
+      }; 
+      int total = 0;
+
+      System.out.println("Nama: " + namaMhs + ", NIM: " + nim);
+      System.out.println("Daftar Produk:");
+      for (Produk p : daftar) {
+         System.out.println("- " + p.nama + ": " + p.harga);
+         total += p.harga;
+      }
+      System.out.println("Total harga semua produk: " + total);
+   }
+}
+
+
+
 )
 ---
 
