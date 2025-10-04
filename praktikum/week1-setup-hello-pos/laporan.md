@@ -1,5 +1,3 @@
----
-
 ## **LAPORAN PRAKTIKUM MINGGU 1**
 
 **Topik:** *Implementasi 3 Paradigma Pemrograman: Procedural, OOP, dan Functional*
@@ -133,9 +131,18 @@ public class HelloFunctional {
 **Output dari ketiga program:**
 
 ```
-<img width="1202" height="297" alt="Cuplikan layar 2025-10-04 162912" src="https://github.com/user-attachments/assets/e8a6e2f4-59c7-4565-8941-ce0d082cea32" />
-
+Nama: Ray, NIM: 240202880
+Daftar Produk:
+- Beras: 10000
+- Pupuk: 15000
+- Benih: 12000
+Total harga semua produk: 37000
 ```
+
+*(Screenshot hasil eksekusi disertakan pada laporan asli)*
+<img width="1202" height="297" alt="Cuplikan layar 2025-10-04 162912" src="https://github.com/user-attachments/assets/d48f8449-08a9-41fc-8f9c-ab1af0dea95f" />
+
+---
 
 ### **Analisis**
 
@@ -164,5 +171,3 @@ Paradigma OOP dan Functional memberikan struktur yang lebih baik dan efisien dib
 
 3. **Sebutkan kelebihan penggunaan class dalam program Java!**
    **Jawaban:** Class memudahkan pengelompokan data dan perilaku, mendukung *reusability*, serta membuat program lebih terorganisir dan mudah dikembangkan.
-
----
