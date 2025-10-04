@@ -130,13 +130,6 @@ public class HelloFunctional {
 **Output dari ketiga program:**
 
 ```
-Nama: Ray, NIM: 240202880
-Daftar Produk:
-- Beras: 10000
-- Pupuk: 15000
-- Benih: 12000
-Total harga semua produk: 37000
-```
 
 *(Screenshot hasil eksekusi disertakan pada laporan asli)*
 <img width="1202" height="297" alt="Cuplikan layar 2025-10-04 162912" src="https://github.com/user-attachments/assets/16050b27-0b9b-40aa-87e5-95df87a43067" />
