@@ -1,3 +1,5 @@
+---
+
 ## **LAPORAN PRAKTIKUM MINGGU 1**
 
 **Topik:** *Implementasi 3 Paradigma Pemrograman: Procedural, OOP, dan Functional*
@@ -8,7 +10,8 @@
 
 * **Nama:** Rayendra Apta Nayottama
 * **NIM:** 240202880
-* **Kelas:** IKRA
+* **Kelas:** 3IKRA
+
 ---
 
 ### **Tujuan**
@@ -129,10 +132,10 @@ public class HelloFunctional {
 
 **Output dari ketiga program:**
 
-```<img width="1202" height="297" alt="Cuplikan layar 2025-10-04 162912" src="https://github.com/user-attachments/assets/16050b27-0b9b-40aa-87e5-95df87a43067" />
+```
+<img width="1202" height="297" alt="Cuplikan layar 2025-10-04 162912" src="https://github.com/user-attachments/assets/e8a6e2f4-59c7-4565-8941-ce0d082cea32" />
 
-
----
+```
 
 ### **Analisis**
 
