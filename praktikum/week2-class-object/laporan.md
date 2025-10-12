@@ -141,11 +141,14 @@ Enkapsulasi melindungi data dari akses langsung yang tidak aman, serta membantu 
 
 ## **Quiz**
 
-1. **Apa itu Class dalam Java?**
-   **Jawaban:** Class adalah blueprint atau cetak biru dari objek yang berisi atribut dan method.
+1. **Mengapa atribut sebaiknya dideklarasikan sebagai private dalam class?**
+   Jawaban:
+   Agar data tidak dapat diakses atau dimodifikasi langsung dari luar class. Dengan menjadikannya private, akses hanya dapat    dilakukan melalui method yang telah disediakan (getter/setter), sehingga data lebih aman dan konsisten.
 
-2. **Apa manfaat enkapsulasi dalam pemrograman OOP?**
-   **Jawaban:** Enkapsulasi melindungi data agar tidak diakses langsung dari luar class dan menjaga konsistensi data.
+2. **Apa fungsi getter dan setter dalam enkapsulasi?**
+   Jawaban:
+   Getter berfungsi untuk mengambil (membaca) nilai atribut, sedangkan setter berfungsi untuk mengubah (menulis) nilai          atribut. Keduanya memastikan data dapat diakses dengan cara yang terkendali sesuai logika program.
 
-3. **Apa yang terjadi jika stok dikurangi melebihi jumlah yang tersedia?**
-   **Jawaban:** Program akan menampilkan pesan “Stok tidak mencukupi!” tanpa mengubah nilai stok.
+3. **Bagaimana cara class Produk mendukung pengembangan aplikasi POS yang lebih kompleks?**
+   Jawaban:
+   Class Produk dapat menjadi dasar dari modul inventori dalam sistem POS. Dengan menambahkan fitur seperti penghitungan        total harga, manajemen stok otomatis, dan integrasi dengan transaksi penjualan, class ini dapat dikembangkan menjadi         komponen inti dari aplikasi POS yang lebih lengkap.
