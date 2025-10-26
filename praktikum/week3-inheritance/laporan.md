@@ -1,43 +1,63 @@
-# Laporan Praktikum Minggu 1 (sesuaikan minggu ke berapa?)
-Topik: [Tuliskan judul topik, misalnya "Class dan Object"]
+# Laporan Praktikum Minggu 3 
+Topik: inheritance
 
 ## Identitas
-- Nama  : [Nama Mahasiswa]
-- NIM   : [NIM Mahasiswa]
-- Kelas : [Kelas]
+- Nama  : Rayendra Apta Nayottama
+- NIM   : 240202880
+- Kelas : 3IKRA
 
 ---
 
 ## Tujuan
-(Tuliskan tujuan praktikum minggu ini.  
-Contoh: *Mahasiswa memahami konsep class dan object serta dapat membuat class Produk dengan enkapsulasi.*)
+Mahasiswa memahami dan mampu menerapkan konsep inheritance (pewarisan) dalam pemrograman berorientasi objek menggunakan bahasa Java, sehingga dapat membuat class turunan yang mewarisi atribut dan method dari class induk.
+
+Dasar Teori
 
 ---
 
 ## Dasar Teori
-(Tuliskan ringkasan teori singkat (3–5 poin) yang mendasari praktikum.  
-Contoh:  
-1. Class adalah blueprint dari objek.  
-2. Object adalah instansiasi dari class.  
-3. Enkapsulasi digunakan untuk menyembunyikan data.)
+Dasar Teori
+Inheritance adalah mekanisme di mana suatu class dapat mewarisi atribut dan method dari class lain.
+Class yang diwarisi disebut superclass (parent class), sedangkan class yang mewarisi disebut subclass (child class).
+Inheritance digunakan untuk mengurangi duplikasi kode dan memperluas fungsionalitas class.
+Keyword extends digunakan dalam Java untuk menunjukkan hubungan pewarisan.
+Subclass dapat menambahkan atribut/method baru atau meng-override method dari superclass.
 
 ---
 
 ## Langkah Praktikum
-(Tuliskan Langkah-langkah dalam prakrikum, contoh:
-1. Langkah-langkah yang dilakukan (setup, coding, run).  
-2. File/kode yang dibuat.  
-3. Commit message yang digunakan.)
-
+Membuka proyek Java yang sudah dibuat pada minggu sebelumnya.
+Membuat class induk bernama Produk dengan atribut dasar seperti kode, nama, harga, dan stok.
+Membuat class turunan ProdukMakanan dan ProdukElektronik yang mewarisi class Produk.
+Menambahkan atribut tambahan pada masing-masing subclass, misalnya tanggalKadaluarsa pada ProdukMakanan, dan garansi pada ProdukElektronik.
+Menjalankan program utama (Main.java) untuk menampilkan data produk menggunakan inheritance.
+Melakukan commit dengan pesan:
+"Menambahkan implementasi inheritance pada class Produk"
 ---
 
 ## Kode Program
 (Tuliskan kode utama yang dibuat, contoh:  
 
 ```java
-// Contoh
-Produk p1 = new Produk("BNH-001", "Benih Padi", 25000, 100);
-System.out.println(p1.getNama());
+package com.upb.agripos;
+
+import com.upb.agripos.model.*;
+import com.upb.agripos.util.CreditBy;
+
+public class MainInheritance {
+    public static void main(String[] args) {
+        Benih benih = new Benih("BNH-001", "Benih Padi IR64", 25000, 100, "IR64");
+        Pupuk pupuk = new Pupuk("PPK-101", "Pupuk Urea", 350000, 40, "Urea");
+        AlatPertanian alat = new AlatPertanian("ALT-501", "Cangkul Baja", 90000, 15, "Baja");
+
+        System.out.println(benih.deskripsi());
+        System.out.println(pupuk.deskripsi());
+        System.out.println(alat.deskripsi());
+
+        CreditBy.print("240202880", "Rayendra Apta Nayottama");
+    }
+}
+
 ```
 )
 ---
@@ -46,28 +66,27 @@ System.out.println(p1.getNama());
 (Sertakan screenshot hasil eksekusi program.  
 ![Screenshot hasil](screenshots/hasil.png)
 )
+<img width="1920" height="1200" alt="Screenshot (4)" src="https://github.com/user-attachments/assets/8682a559-db94-45ac-86b9-2aee45fd9386" />
+
 ---
 
 ## Analisis
-(
-- Jelaskan bagaimana kode berjalan.  
-- Apa perbedaan pendekatan minggu ini dibanding minggu sebelumnya.  
-- Kendala yang dihadapi dan cara mengatasinya.  
-)
+Program menggunakan konsep inheritance di mana ProdukMakanan dan ProdukElektronik mewarisi atribut dan method dari class Produk.
+Subclass dapat menambahkan atribut baru dan meng-override method tampilkanInfo() agar menampilkan informasi tambahan sesuai jenis produk.
+Dibanding minggu sebelumnya (enkapsulasi), kali ini program lebih efisien karena tidak perlu menulis ulang atribut yang sama di setiap class.
+Kendala yang muncul adalah ketika lupa menulis super() di konstruktor subclass, menyebabkan error saat kompilasi. Setelah menambahkan super(), program berjalan lancar.
 ---
 
 ## Kesimpulan
-(Tuliskan kesimpulan dari praktikum minggu ini.  
-Contoh: *Dengan menggunakan class dan object, program menjadi lebih terstruktur dan mudah dikembangkan.*)
-
+Dengan menggunakan konsep inheritance, kode program menjadi lebih efisien dan terstruktur. Class turunan dapat memanfaatkan fitur dari class induk tanpa harus menulis ulang kode yang sama, sehingga memudahkan proses pengembangan dan pemeliharaan aplikasi.
 ---
 
 ## Quiz
-(1. [Tuliskan kembali pertanyaan 1 dari panduan]  
-   **Jawaban:** …  
+Apa yang dimaksud dengan inheritance dalam pemrograman berorientasi objek?
+Jawaban: Inheritance adalah konsep pewarisan di mana sebuah class (subclass) dapat mewarisi atribut dan method dari class lain (superclass).
 
-2. [Tuliskan kembali pertanyaan 2 dari panduan]  
-   **Jawaban:** …  
+Apa perbedaan antara override dan overload dalam Java?
+Jawaban: Override terjadi ketika subclass mendefinisikan ulang method dari superclass dengan nama dan parameter yang sama, sedangkan overload terjadi ketika ada beberapa method dengan nama sama namun parameter berbeda.
 
-3. [Tuliskan kembali pertanyaan 3 dari panduan]  
-   **Jawaban:** …  )
+Mengapa inheritance dianggap penting dalam OOP?
+Jawaban: Karena inheritance memungkinkan reusability kode, meminimalkan duplikasi, dan membuat sistem lebih mudah dikembangkan.
